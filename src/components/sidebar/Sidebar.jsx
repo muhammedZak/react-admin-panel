@@ -11,34 +11,47 @@ import PsychologyIcon from '@mui/icons-material/Psychology';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LogoutIcon from '@mui/icons-material/Logout';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="top">
-        <span className="logo">Admin</span>
+        <Link to="/" style={{ textDecoration: 'none' }}>
+          <span className="logo">Admin</span>
+        </Link>
       </div>
       <hr />
       <div className="center">
         <ul>
           <p className="title">MAIN</p>
-          <li>
-            <DashboardIcon className="icon" />
-            <span>Dashboard</span>
-          </li>
+          <Link to="/" style={{ textDecoration: 'none' }}>
+            <li>
+              <DashboardIcon className="icon" />
+              <span>Dashboard</span>
+            </li>
+          </Link>
+
           <p className="title">LISTS</p>
-          <li>
-            <PersonIcon className="icon" />
-            <span>Users</span>
-          </li>
-          <li>
-            <ProductionQuantityLimitsIcon className="icon" />
-            <span>Products</span>
-          </li>
-          <li>
-            <ViewModuleIcon className="icon" />
-            <span>Orders</span>
-          </li>
+          <Link to="/users" style={{ textDecoration: 'none' }}>
+            <li>
+              <PersonIcon className="icon" />
+              <span>Users</span>
+            </li>
+          </Link>
+          <Link to="/products" style={{ textDecoration: 'none' }}>
+            <li>
+              <ProductionQuantityLimitsIcon className="icon" />
+              <span>Products</span>
+            </li>
+          </Link>
+          <Link to="/orders" style={{ textDecoration: 'none' }}>
+            <li>
+              <ViewModuleIcon className="icon" />
+              <span>Orders</span>
+            </li>
+          </Link>
+
           <li>
             <BadgeIcon className="icon" />
             <span>Delivery</span>
